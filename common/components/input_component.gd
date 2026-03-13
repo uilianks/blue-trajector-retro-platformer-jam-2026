@@ -6,10 +6,11 @@ class_name ImputComponent extends Node
 @export var jump_force_max: float = 700.0
 @export var jump_force_min: float = 100.0
 @export var max_angle_deg: float = 75.0
+@onready var charge: AudioStreamPlayer = $"../../SFX/Charge"
 
 @onready var sprite: AnimatedSprite2D = $"../../AnimatedSprite2D"
-@onready var power_bar: ProgressBar = $"../../UI/PowerBar"
-@onready var angle_bar: ProgressBar = $"../../UI/AngleBar"
+@onready var power_bar: PowerBar = $"../../UI/PowerBar"
+@onready var angle_bar: AngleBar = $"../../UI/AngleBar"
 
 enum State { IDLE, CHARGING_POWER, CHARGING_ANGLE, JUMPING }
 var state: State = State.IDLE
@@ -43,6 +44,7 @@ func on_accept_pressed(is_on_floor: bool) -> void:
 			power_bar.visible = true
 			angle_bar.visible = false
 			power_bar.refresh(power)
+			charge.play()
 		State.CHARGING_POWER:
 			state = State.CHARGING_ANGLE
 			angle_t = 50.0; angle_dir = 1.0
@@ -57,4 +59,5 @@ func on_accept_pressed(is_on_floor: bool) -> void:
 			BusSignals.jumped.emit(force, angle_rad)
 
 func set_idle() -> void:
+	charge.stop()
 	state = State.IDLE

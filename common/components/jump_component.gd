@@ -5,6 +5,8 @@ class_name JumpComponent extends Node
 @export var gravity: float = 1800.0
 @export var bounce_min: float = 0.05
 @export var bounce_max: float = 0.25
+@onready var jump: AudioStreamPlayer = $"../../SFX/Jump"
+@onready var charge: AudioStreamPlayer = $"../../SFX/Charge"
 
 var _body: CharacterBody2D
 var _sprite: AnimatedSprite2D
@@ -22,6 +24,7 @@ func physics_tick(delta: float, is_jumping: bool) -> bool:
 		return false
 
 	_sprite.play("jump")
+	
 	var was_on_floor := _body.is_on_floor()
 	_body.move_and_slide()
 
@@ -40,6 +43,7 @@ func physics_tick(delta: float, is_jumping: bool) -> bool:
 	return false
 
 func launch(force: float, angle_rad: float) -> void:
+	jump.play()
 	_last_force = force
 	_body.velocity.x = sin(angle_rad) * force
 	_body.velocity.y = -cos(angle_rad) * force

@@ -8,8 +8,6 @@
 [ext_resource type="Script" uid="uid://cdqmco65ww3a8" path="res://character/angle_bar.gd" id="6_tgjim"]
 [ext_resource type="Script" uid="uid://cbgu0uo6fs17y" path="res://common/components/jump_component.gd" id="8_dy06j"]
 [ext_resource type="Script" uid="uid://ccuu2lmbwrvcn" path="res://common/components/input_component.gd" id="9_dy06j"]
-[ext_resource type="AudioStream" uid="uid://c2uneeep6vm4d" path="res://assets/music/jump.mp3" id="9_qkjfd"]
-[ext_resource type="AudioStream" uid="uid://q0ia2pu5ta1d" path="res://assets/music/charge-energy.mp3" id="10_gx66j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b4qc5"]
 atlas = ExtResource("2_hx151")
@@ -156,11 +154,3 @@ script = ExtResource("6_tgjim")
 [node name="Label" type="Label" parent="UI/AngleBar" unique_id=621314853]
 offset_right = 40.0
 offset_bottom = 23.0
-
-[node name="SFX" type="Node" parent="." unique_id=343516172]
-
-[node name="Jump" type="AudioStreamPlayer" parent="SFX" unique_id=135693902]
-stream = ExtResource("9_qkjfd")
-
-[node name="Charge" type="AudioStreamPlayer" parent="SFX" unique_id=1225614792]
-stream = ExtResource("10_gx66j")

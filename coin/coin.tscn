@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://8was67a1snbp" path="res://assets/miscellaneous sprites/coin_anim_strip_6.png" id="1_h8ymi"]
 [ext_resource type="Script" uid="uid://vthxst0t5p1t" path="res://coin/coin.gd" id="1_ksovn"]
 [ext_resource type="Texture2D" uid="uid://c2eb5nuxrrqaj" path="res://assets/miscellaneous sprites/coin_pickup_anim_strip_6.png" id="2_el688"]
+[ext_resource type="AudioStream" uid="uid://blt3f6fl1re1s" path="res://assets/music/coin-pickup.mp3" id="4_gbvlv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_el688"]
 radius = 3.0
@@ -115,3 +116,8 @@ shape = SubResource("CapsuleShape2D_el688")
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_5c7c5")
 animation = &"picked"
+
+[node name="Node" type="Node" parent="." unique_id=1638766877]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node" unique_id=327876404]
+stream = ExtResource("4_gbvlv")

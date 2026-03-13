@@ -2,6 +2,7 @@ extends Area2D
 
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player: AudioStreamPlayer = $Node/AudioStreamPlayer
 
 func _ready() -> void:
 	animated_sprite_2d.play("idle")
@@ -11,6 +12,7 @@ func _ready() -> void:
 func _on_body_entered(body: Node) -> void:
 	if body is CharacterBody2D:
 		set_deferred("monitoring", false)
+		audio_stream_player.play()
 		animated_sprite_2d.play("picked")
 
 func _on_animation_finished() -> void:

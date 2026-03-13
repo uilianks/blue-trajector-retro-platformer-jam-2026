@@ -5,7 +5,6 @@ extends CharacterBody2D
 @onready var imput_component: ImputComponent = $Components/ImputComponent
 
 func _ready() -> void:
-	print('oi')
 	sprite.play("idle")
 	jump_component.setup(self, sprite)
 	BusSignals.jumped.connect(jump_component.launch)
@@ -16,8 +15,12 @@ func _physics_process(delta: float) -> void:
 	var landed := jump_component.physics_tick(delta, is_jumping)
 	if landed:
 		imput_component.set_idle()
-	if not is_jumping:
-		move_and_slide()
+	move_and_slide()
+	
+	if is_on_floor():
+		var platform = get_last_slide_collision()
+		if platform and platform.get_collider() is AnimatableBody2D:
+			velocity += platform.get_collider_velocity()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):
