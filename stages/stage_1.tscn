@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c0jt3es1vc1mu"]
+
+[ext_resource type="PackedScene" uid="uid://uxe74fddhdgi" path="res://plataforms/ground.tscn" id="1_p6prp"]
+[ext_resource type="PackedScene" uid="uid://cfrpe2y6lr721" path="res://character/character.tscn" id="2_40wcd"]
+[ext_resource type="PackedScene" uid="uid://cf0tjplvtofbw" path="res://coin/coin.tscn" id="3_40wcd"]
+
+[node name="World" type="Node2D" unique_id=124538361]
+
+[node name="Plataform" parent="." unique_id=1650047652 instance=ExtResource("1_p6prp")]
+
+[node name="Character" parent="." unique_id=1595900580 instance=ExtResource("2_40wcd")]
+position = Vector2(244, 260)
+
+[node name="Coin" parent="." unique_id=1718067180 instance=ExtResource("3_40wcd")]
+position = Vector2(146, 261)
+
+[connection signal="body_entered" from="Coin" to="Character" method="_on_coin_body_entered"]
