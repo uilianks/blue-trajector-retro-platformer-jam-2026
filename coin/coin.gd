@@ -1,5 +1,6 @@
 extends Area2D
 
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 func _ready() -> void:
@@ -14,4 +15,5 @@ func _on_body_entered(body: Node) -> void:
 
 func _on_animation_finished() -> void:
 	if animated_sprite_2d.animation == "picked":
+		BusSignals.collected.emit()
 		queue_free()

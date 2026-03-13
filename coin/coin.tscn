@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://c2eb5nuxrrqaj" path="res://assets/miscellaneous sprites/coin_pickup_anim_strip_6.png" id="2_el688"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_el688"]
-radius = 6.0
-height = 12.0
+radius = 3.0
+height = 8.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_el688"]
 atlas = ExtResource("1_h8ymi")
@@ -105,7 +105,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Coin" type="Area2D" unique_id=547508149]
+[node name="Coin" type="Area2D" unique_id=547508149 groups=["coin"]]
 script = ExtResource("1_ksovn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=455219608]
