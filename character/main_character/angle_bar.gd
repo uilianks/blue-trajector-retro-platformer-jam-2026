@@ -3,7 +3,7 @@ class_name AngleBar extends Node2D
 @export var max_angle_deg: float = 75.0
 @export var arrow_length: float = 56.0
 @export var pixel_size: float = 4.0
-@export var arrow_color: Color = Color("#378ADD")
+@export var arrow_color: Color = Color("ffffffff")
 
 var _angle_rad: float = 0.0
 

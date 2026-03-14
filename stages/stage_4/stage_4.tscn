@@ -3,16 +3,18 @@
 [ext_resource type="Script" uid="uid://ltapqmgwdkjf" path="res://common/stage/stage_setup.gd" id="1_45pb0"]
 [ext_resource type="Texture2D" uid="uid://cxpvlt82q4lhp" path="res://assets/tiles and background_foreground (new)/tileset.png" id="2_4j67g"]
 [ext_resource type="PackedScene" uid="uid://cfrpe2y6lr721" path="res://character/main_character/character.tscn" id="3_6ytyu"]
+[ext_resource type="Texture2D" uid="uid://4tngwtitxr8p" path="res://assets/blacknwhite_p=1_s=2.png" id="3_802n5"]
 [ext_resource type="PackedScene" uid="uid://dpsrdr4dtmf3p" path="res://UI/coin_counter/ui_coin_counter.tscn" id="4_wy45p"]
 [ext_resource type="PackedScene" uid="uid://c4kytam7ipx7e" path="res://UI/space/ui_press_space.tscn" id="4_xtff1"]
 [ext_resource type="AudioStream" uid="uid://dm87iq5ys6446" path="res://assets/music/ost.wav" id="5_wy45p"]
 [ext_resource type="PackedScene" uid="uid://cc6c2q21cmk73" path="res://UI/life_counter/life_counter.tscn" id="5_ykeq0"]
 [ext_resource type="PackedScene" uid="uid://dd5a6qjp7vb8f" path="res://environment/door/door.tscn" id="6_ykeq0"]
-[ext_resource type="PackedScene" uid="uid://dijehclyrqasn" path="res://stages/stage_5/stage_5.tscn" id="7_4j67g"]
-[ext_resource type="PackedScene" uid="uid://cf0tjplvtofbw" path="res://itens/coin/coin.tscn" id="7_rbv7h"]
 [ext_resource type="PackedScene" uid="uid://drksqen6jrtkv" path="res://environment/plataform5x/plataform5x.tscn" id="8_1mxwh"]
+[ext_resource type="PackedScene" uid="uid://hjvxxiwtdmmp" path="res://environment/spike_plataform/spike_plataform.tscn" id="11_fv4vn"]
+[ext_resource type="PackedScene" uid="uid://dsfqogwqja5jo" path="res://environment/plataform0x/plataform0x.tscn" id="13_ykeq0"]
+[ext_resource type="PackedScene" uid="uid://bc3ehwo2ydeqw" path="res://stages/stage_2/stage_2.tscn" id="16_qy33w"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cgayt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_45pil"]
 texture = ExtResource("2_4j67g")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -131,21 +133,49 @@ texture = ExtResource("2_4j67g")
 9:3/0 = 0
 9:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSet" id="TileSet_7iwxo"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rotm8"]
+texture = ExtResource("3_802n5")
+0:8/0 = 0
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:8/0 = 0
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:9/0 = 0
+1:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:9/0 = 0
+0:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_iwnjx"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_cgayt")
+sources/0 = SubResource("TileSetAtlasSource_45pil")
+sources/2 = SubResource("TileSetAtlasSource_rotm8")
 
 [node name="Stage_4" type="Node2D" unique_id=124538361]
 script = ExtResource("1_45pb0")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1641037162]
-tile_map_data = PackedByteArray("AAAAABIAAAABAAAAAAABABIAAAABAAAAAAACABIAAAABAAAAAAADABIAAAABAAAAAAAEABIAAAABAAAAAAAFABIAAAABAAAAAAAGABIAAAABAAAAAAAHABIAAAABAAAAAAAIABIAAAABAAAAAAAJABIAAAABAAAAAAAKABIAAAABAAAAAAALABIAAAABAAAAAAAMABIAAAABAAAAAAANABIAAAABAAAAAAAOABIAAAABAAAAAAAPABIAAAABAAAAAAAQABIAAAABAAAAAAARABIAAAABAAAAAAASABIAAAABAAAAAAATABIAAAABAAAAAAAUABIAAAABAAAAAAAVABIAAAABAAAAAAAWABIAAAABAAAAAAAXABIAAAABAAAAAAAYABIAAAABAAAAAAAZABIAAAABAAAAAAAaABIAAAABAAAAAAAbABIAAAABAAAAAAAcABIAAAABAAAAAAAdABIAAAABAAAAAAAeABIAAAABAAAAAAAfABIAAAABAAAAAAAgABIAAAABAAAAAAAhABIAAAABAAAAAAAiABIAAAABAAAAAAAjABIAAAABAAAAAAAkABIAAAABAAAAAAAlABIAAAABAAAAAAAmABIAAAABAAAAAAAnABIAAAABAAAAAAAAABEAAAAJAAMAAAAAABAAAAAJAAMAAAAAAA8AAAAJAAMAAAAAAA4AAAAJAAMAAAAAAA0AAAAJAAMAAAAAAAwAAAAJAAMAAAAAAAsAAAAJAAMAAAAAAAoAAAAJAAMAAAAAAAkAAAAJAAMAAAAAAAgAAAAJAAMAAAAAAAcAAAAJAAMAAAAAAAYAAAAJAAMAAAAAAAUAAAAJAAMAAAAAAAQAAAAJAAMAAAAAAAMAAAAJAAMAAAAAAAIAAAAJAAMAAAAAAAEAAAAJAAMAAAAAAAAAAAAJAAMAAAABAAAAAAAJAAMAAAACAAAAAAAJAAMAAAADAAAAAAAJAAMAAAAEAAAAAAAJAAMAAAAFAAAAAAAJAAMAAAAGAAAAAAAJAAMAAAAHAAAAAAAJAAMAAAAIAAAAAAAJAAMAAAAJAAAAAAAJAAMAAAAKAAAAAAAJAAMAAAALAAAAAAAJAAMAAAAMAAAAAAAJAAMAAAANAAAAAAAJAAMAAAAOAAAAAAAJAAMAAAAPAAAAAAAJAAMAAAAQAAAAAAAJAAMAAAARAAAAAAAJAAMAAAASAAAAAAAJAAMAAAATAAAAAAAJAAMAAAAUAAAAAAAJAAMAAAAVAAAAAAAJAAMAAAAWAAAAAAAJAAMAAAAXAAAAAAAJAAMAAAAYAAAAAAAJAAMAAAAZAAAAAAAJAAMAAAAaAAAAAAAJAAMAAAAbAAAAAAAJAAMAAAAcAAAAAAAJAAMAAAAdAAAAAAAJAAMAAAAeAAAAAAAJAAMAAAAfAAAAAAAJAAMAAAAgAAAAAAAJAAMAAAAhAAAAAAAJAAMAAAAiAAAAAAAJAAMAAAAjAAAAAAAJAAMAAAAkAAAAAAAJAAMAAAAlAAAAAAAJAAMAAAAmAAAAAAAJAAMAAAAnAAAAAAAJAAMAAAAnAAEAAAAJAAMAAAAnAAIAAAAJAAMAAAAnAAMAAAAJAAMAAAAnAAQAAAAJAAMAAAAnAAUAAAAJAAMAAAAnAAYAAAAJAAMAAAAnAAcAAAAJAAMAAAAnAAgAAAAJAAMAAAAnAAkAAAAJAAMAAAAnAAoAAAAJAAMAAAAnAAsAAAAJAAMAAAAnAAwAAAAJAAMAAAAnAA0AAAAJAAMAAAAnAA4AAAAJAAMAAAAnAA8AAAAJAAMAAAAnABAAAAAJAAMAAAAnABEAAAAJAAMAAAA=")
-tile_set = SubResource("TileSet_7iwxo")
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1170848752]
+tile_map_data = PackedByteArray("AAAAABEAAAAJAAMAAAAAABAAAAAJAAMAAAAAAA8AAAAJAAMAAAAAAA4AAAAJAAMAAAAAAA0AAAAJAAMAAAAAAAwAAAAJAAMAAAAAAAsAAAAJAAMAAAAAAAoAAAAJAAMAAAAAAAkAAAAJAAMAAAAAAAgAAAAJAAMAAAAAAAcAAAAJAAMAAAAAAAYAAAAJAAMAAAAAAAUAAAAJAAMAAAAAAAQAAAAJAAMAAAAAAAMAAAAJAAMAAAAAAAIAAAAJAAMAAAAAAAEAAAAJAAMAAAAAAAAAAAAJAAMAAAAjAAAAAAAJAAMAAAAkAAAAAAAJAAMAAAAlAAAAAAAJAAMAAAAmAAAAAAAJAAMAAAAnAAAAAAAJAAMAAAAnAAEAAAAJAAMAAAAnAAIAAAAJAAMAAAAnAAMAAAAJAAMAAAAnAAQAAAAJAAMAAAAnAAUAAAAJAAMAAAAnAAYAAAAJAAMAAAAnAAcAAAAJAAMAAAAnAAgAAAAJAAMAAAAnAAkAAAAJAAMAAAAnAAoAAAAJAAMAAAAnAAsAAAAJAAMAAAAnAAwAAAAJAAMAAAAnAA0AAAAJAAMAAAAnAA4AAAAJAAMAAAAnAA8AAAAJAAMAAAAnABAAAAAJAAMAAAAnABEAAAAJAAMAAAA=")
+tile_set = SubResource("TileSet_iwnjx")
 
 [node name="Character" parent="." unique_id=1595900580 instance=ExtResource("3_6ytyu")]
 position = Vector2(58, 276)
 
-[node name="UI" type="Control" parent="." unique_id=876390361]
+[node name="UI" type="Control" parent="." unique_id=211699834]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 642.0
@@ -191,25 +221,179 @@ offset_bottom = 243.0
 scale = Vector2(0.5, 0.5)
 metadata/_edit_use_anchors_ = true
 
-[node name="Music" type="Node" parent="." unique_id=921486686]
+[node name="Music" type="Node" parent="." unique_id=1299149420]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music" unique_id=1765072017]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music" unique_id=1039245632]
 stream = ExtResource("5_wy45p")
 autoplay = true
 
-[node name="Composition" type="Node2D" parent="." unique_id=1060332453]
+[node name="Composition" type="Node2D" parent="." unique_id=2007711493]
+
+[node name="Plataform5x" parent="Composition" unique_id=896887307 instance=ExtResource("8_1mxwh")]
+position = Vector2(41, 286)
+move_type = 0
+
+[node name="SpikePlataform" parent="Composition" unique_id=1136465902 instance=ExtResource("11_fv4vn")]
+position = Vector2(16, 320)
+
+[node name="SpikePlataform2" parent="Composition" unique_id=1322384085 instance=ExtResource("11_fv4vn")]
+position = Vector2(30, 320)
+
+[node name="SpikePlataform3" parent="Composition" unique_id=1106209747 instance=ExtResource("11_fv4vn")]
+position = Vector2(44, 320)
+
+[node name="SpikePlataform4" parent="Composition" unique_id=1527249361 instance=ExtResource("11_fv4vn")]
+position = Vector2(58, 320)
+
+[node name="SpikePlataform5" parent="Composition" unique_id=851860574 instance=ExtResource("11_fv4vn")]
+position = Vector2(72, 320)
+
+[node name="SpikePlataform6" parent="Composition" unique_id=1386994203 instance=ExtResource("11_fv4vn")]
+position = Vector2(86, 320)
+
+[node name="SpikePlataform7" parent="Composition" unique_id=1733980864 instance=ExtResource("11_fv4vn")]
+position = Vector2(100, 320)
+
+[node name="SpikePlataform8" parent="Composition" unique_id=384556066 instance=ExtResource("11_fv4vn")]
+position = Vector2(114, 320)
+
+[node name="SpikePlataform9" parent="Composition" unique_id=1886564545 instance=ExtResource("11_fv4vn")]
+position = Vector2(128, 320)
+
+[node name="SpikePlataform10" parent="Composition" unique_id=1998207747 instance=ExtResource("11_fv4vn")]
+position = Vector2(142, 320)
+
+[node name="SpikePlataform11" parent="Composition" unique_id=2030563753 instance=ExtResource("11_fv4vn")]
+position = Vector2(156, 320)
+
+[node name="SpikePlataform12" parent="Composition" unique_id=1483652234 instance=ExtResource("11_fv4vn")]
+position = Vector2(170, 320)
+
+[node name="SpikePlataform13" parent="Composition" unique_id=1482587501 instance=ExtResource("11_fv4vn")]
+position = Vector2(184, 320)
+
+[node name="SpikePlataform14" parent="Composition" unique_id=1122234917 instance=ExtResource("11_fv4vn")]
+position = Vector2(198, 320)
+
+[node name="SpikePlataform15" parent="Composition" unique_id=774618740 instance=ExtResource("11_fv4vn")]
+position = Vector2(212, 320)
+
+[node name="SpikePlataform16" parent="Composition" unique_id=5081666 instance=ExtResource("11_fv4vn")]
+position = Vector2(226, 320)
+
+[node name="SpikePlataform17" parent="Composition" unique_id=388031608 instance=ExtResource("11_fv4vn")]
+position = Vector2(240, 320)
+
+[node name="SpikePlataform18" parent="Composition" unique_id=1615795323 instance=ExtResource("11_fv4vn")]
+position = Vector2(254, 320)
+
+[node name="SpikePlataform19" parent="Composition" unique_id=1780935422 instance=ExtResource("11_fv4vn")]
+position = Vector2(268, 320)
+
+[node name="SpikePlataform20" parent="Composition" unique_id=152440714 instance=ExtResource("11_fv4vn")]
+position = Vector2(282, 320)
+
+[node name="SpikePlataform21" parent="Composition" unique_id=452659707 instance=ExtResource("11_fv4vn")]
+position = Vector2(296, 320)
+
+[node name="SpikePlataform22" parent="Composition" unique_id=791254059 instance=ExtResource("11_fv4vn")]
+position = Vector2(310, 320)
+
+[node name="SpikePlataform23" parent="Composition" unique_id=1289131145 instance=ExtResource("11_fv4vn")]
+position = Vector2(324, 320)
+
+[node name="SpikePlataform24" parent="Composition" unique_id=96776946 instance=ExtResource("11_fv4vn")]
+position = Vector2(338, 320)
+
+[node name="SpikePlataform25" parent="Composition" unique_id=512760590 instance=ExtResource("11_fv4vn")]
+position = Vector2(352, 320)
+
+[node name="SpikePlataform26" parent="Composition" unique_id=1030220244 instance=ExtResource("11_fv4vn")]
+position = Vector2(366, 320)
+
+[node name="SpikePlataform27" parent="Composition" unique_id=1628006252 instance=ExtResource("11_fv4vn")]
+position = Vector2(380, 320)
+
+[node name="SpikePlataform28" parent="Composition" unique_id=1418619188 instance=ExtResource("11_fv4vn")]
+position = Vector2(394, 320)
+
+[node name="SpikePlataform29" parent="Composition" unique_id=440840006 instance=ExtResource("11_fv4vn")]
+position = Vector2(408, 320)
+
+[node name="SpikePlataform30" parent="Composition" unique_id=777947932 instance=ExtResource("11_fv4vn")]
+position = Vector2(422, 320)
+
+[node name="SpikePlataform31" parent="Composition" unique_id=1186179963 instance=ExtResource("11_fv4vn")]
+position = Vector2(436, 320)
+
+[node name="SpikePlataform32" parent="Composition" unique_id=1851192220 instance=ExtResource("11_fv4vn")]
+position = Vector2(450, 320)
+
+[node name="SpikePlataform33" parent="Composition" unique_id=1509997838 instance=ExtResource("11_fv4vn")]
+position = Vector2(464, 320)
+
+[node name="SpikePlataform34" parent="Composition" unique_id=1807112948 instance=ExtResource("11_fv4vn")]
+position = Vector2(478, 320)
+
+[node name="SpikePlataform35" parent="Composition" unique_id=1331461345 instance=ExtResource("11_fv4vn")]
+position = Vector2(492, 320)
+
+[node name="SpikePlataform36" parent="Composition" unique_id=1305949282 instance=ExtResource("11_fv4vn")]
+position = Vector2(506, 320)
+
+[node name="SpikePlataform37" parent="Composition" unique_id=1397740614 instance=ExtResource("11_fv4vn")]
+position = Vector2(520, 320)
+
+[node name="SpikePlataform38" parent="Composition" unique_id=287209228 instance=ExtResource("11_fv4vn")]
+position = Vector2(534, 320)
+
+[node name="SpikePlataform39" parent="Composition" unique_id=623619708 instance=ExtResource("11_fv4vn")]
+position = Vector2(548, 320)
+
+[node name="SpikePlataform40" parent="Composition" unique_id=1545848154 instance=ExtResource("11_fv4vn")]
+position = Vector2(562, 320)
+
+[node name="SpikePlataform41" parent="Composition" unique_id=1483635402 instance=ExtResource("11_fv4vn")]
+position = Vector2(576, 320)
+
+[node name="SpikePlataform42" parent="Composition" unique_id=544650733 instance=ExtResource("11_fv4vn")]
+position = Vector2(590, 320)
+
+[node name="SpikePlataform43" parent="Composition" unique_id=386614510 instance=ExtResource("11_fv4vn")]
+position = Vector2(604, 320)
+
+[node name="SpikePlataform44" parent="Composition" unique_id=481829792 instance=ExtResource("11_fv4vn")]
+position = Vector2(618, 320)
+
+[node name="SpikePlataform45" parent="Composition" unique_id=26456670 instance=ExtResource("11_fv4vn")]
+position = Vector2(632, 320)
+
+[node name="SpikePlataform46" parent="Composition" unique_id=1391097807 instance=ExtResource("11_fv4vn")]
+position = Vector2(646, 320)
+
+[node name="SpikePlataform47" parent="Composition" unique_id=477346902 instance=ExtResource("11_fv4vn")]
+position = Vector2(660, 320)
 
 [node name="Door" parent="Composition" unique_id=1041598118 instance=ExtResource("6_ykeq0")]
-position = Vector2(35, 276)
-next_stage = ExtResource("7_4j67g")
+position = Vector2(459, 157)
+next_stage = ExtResource("16_qy33w")
 
-[node name="Coin5" parent="Composition" unique_id=1413662043 instance=ExtResource("7_rbv7h")]
-position = Vector2(407, 42)
-
-[node name="Plataform5" parent="Composition" unique_id=879139560 instance=ExtResource("8_1mxwh")]
-position = Vector2(369, 81)
+[node name="Plataform1x" parent="Composition" unique_id=912558507 instance=ExtResource("13_ykeq0")]
+position = Vector2(134, 137)
 move_type = 2
-range_distance = 50.0
 
-[node name="Plataform6" parent="Composition" unique_id=1631269976 instance=ExtResource("8_1mxwh")]
-position = Vector2(180, 205)
+[node name="Plataform1x2" parent="Composition" unique_id=2105883440 instance=ExtResource("13_ykeq0")]
+position = Vector2(197, 250)
+move_type = 0
+
+[node name="Plataform1x3" parent="Composition" unique_id=810989671 instance=ExtResource("13_ykeq0")]
+position = Vector2(250, 215)
+move_type = 0
+
+[node name="Plataform1x4" parent="Composition" unique_id=2082799266 instance=ExtResource("13_ykeq0")]
+position = Vector2(306, 173)
+move_type = 0
+
+[node name="Plataform5x2" parent="Composition" unique_id=1102715460 instance=ExtResource("8_1mxwh")]
+position = Vector2(395, 170)
+move_type = 0

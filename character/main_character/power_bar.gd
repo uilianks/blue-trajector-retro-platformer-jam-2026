@@ -14,10 +14,10 @@ func refresh(power: float) -> void:
 
 func _get_color() -> Color:
 	if _power < 40.0:
-		return Color("#1D9E75")
+		return Color("ffffffff")
 	elif _power < 70.0:
-		return Color("#BA7517")
-	return Color("#E24B4A")
+		return Color("dadad9ff")
+	return Color("a8a6a5ff")
 
 func _draw() -> void:
 	var steps := 24
