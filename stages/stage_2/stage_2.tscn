@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cc6c2q21cmk73" path="res://UI/life_counter/life_counter.tscn" id="5_26fkx"]
 [ext_resource type="PackedScene" uid="uid://dd5a6qjp7vb8f" path="res://environment/door/door.tscn" id="6_kxhkr"]
 [ext_resource type="AudioStream" uid="uid://dm87iq5ys6446" path="res://assets/music/ost.wav" id="7_hre5i"]
-[ext_resource type="PackedScene" uid="uid://fy8tfhjykq87" path="res://stages/stage_3/stage_3.tscn" id="7_wemh8"]
+[ext_resource type="PackedScene" uid="uid://g7a5wyam3b3b" path="res://stages/stage_template/stage_template.tscn" id="7_wemh8"]
 [ext_resource type="PackedScene" uid="uid://drksqen6jrtkv" path="res://environment/plataform5x/plataform5x.tscn" id="10_kxhkr"]
 [ext_resource type="PackedScene" uid="uid://hjvxxiwtdmmp" path="res://environment/spike_plataform/spike_plataform.tscn" id="12_kxhkr"]
 [ext_resource type="PackedScene" uid="uid://c2lo382y2byuu" path="res://environment/plataform1x/plataform1x.tscn" id="13_48pcj"]
