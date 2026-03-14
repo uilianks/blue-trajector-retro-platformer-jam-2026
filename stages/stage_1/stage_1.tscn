@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0jt3es1vc1mu"]
 
-[ext_resource type="PackedScene" uid="uid://uxe74fddhdgi" path="res://environment/stage_1_border.tscn" id="1_p6prp"]
+[ext_resource type="PackedScene" uid="uid://uxe74fddhdgi" path="res://stages/stage_1/stage_1_border.tscn" id="1_p6prp"]
 [ext_resource type="Script" uid="uid://ltapqmgwdkjf" path="res://stages/stage_1/stage_1.gd" id="1_yor2l"]
 [ext_resource type="Texture2D" uid="uid://bpxwb6xqypp6x" path="res://assets/tiles and background_foreground (new)/bg_0.png" id="2_0p8va"]
 [ext_resource type="PackedScene" uid="uid://cfrpe2y6lr721" path="res://character/character.tscn" id="2_40wcd"]
@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://dd5a6qjp7vb8f" path="res://door/door.tscn" id="7_wd8hm"]
 [ext_resource type="PackedScene" uid="uid://brg2lg2ymig8" path="res://stages/stage_2/stage_2.tscn" id="8_0ymf2"]
 [ext_resource type="AudioStream" uid="uid://dm87iq5ys6446" path="res://assets/music/ost.wav" id="8_6oaam"]
-[ext_resource type="PackedScene" uid="uid://drksqen6jrtkv" path="res://environment/plataform.tscn" id="9_531qe"]
+[ext_resource type="PackedScene" uid="uid://drksqen6jrtkv" path="res://environment/plataform/plataform.tscn" id="9_531qe"]
+[ext_resource type="PackedScene" uid="uid://hjvxxiwtdmmp" path="res://environment/spike_plataform/spike_plataform.tscn" id="11_cgayt"]
+[ext_resource type="PackedScene" uid="uid://c4kytam7ipx7e" path="res://UI/ui_press_space.tscn" id="12_7iwxo"]
 
 [node name="Stage_1" type="Node2D" unique_id=124538361]
 script = ExtResource("1_yor2l")
@@ -26,23 +28,42 @@ position = Vector2(317, 154.5)
 scale = Vector2(2.6166666, 1.94375)
 texture = ExtResource("3_wd8hm")
 
-[node name="Plataform" parent="." unique_id=1650047652 instance=ExtResource("1_p6prp")]
-
-[node name="Character" parent="." unique_id=1595900580 instance=ExtResource("2_40wcd")]
-position = Vector2(58, 276)
-
 [node name="Coin" parent="." unique_id=1718067180 instance=ExtResource("3_40wcd")]
-position = Vector2(260, 255)
+position = Vector2(286, 257)
 
 [node name="Door" parent="." unique_id=1041598118 instance=ExtResource("7_wd8hm")]
 position = Vector2(523, 276)
 next_stage = ExtResource("8_0ymf2")
 
-[node name="AnimatableBody2D" parent="." unique_id=1272443821 instance=ExtResource("9_531qe")]
-position = Vector2(151, 212)
-moving = true
+[node name="BaseBorder" parent="." unique_id=1650047652 instance=ExtResource("1_p6prp")]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1765072017]
+[node name="Plataform2" parent="." unique_id=770349203 instance=ExtResource("9_531qe")]
+position = Vector2(112, 256)
+
+[node name="SpikePlataform" parent="." unique_id=504110596 instance=ExtResource("11_cgayt")]
+position = Vector2(240, 288)
+
+[node name="Character" parent="." unique_id=1595900580 instance=ExtResource("2_40wcd")]
+position = Vector2(58, 276)
+
+[node name="UI" type="Control" parent="." unique_id=862725961]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="UiPressSpace" parent="UI" unique_id=479573559 instance=ExtResource("12_7iwxo")]
+layout_mode = 1
+offset_left = 13.0
+offset_top = 243.0
+offset_right = 13.0
+offset_bottom = 243.0
+scale = Vector2(0.5, 0.5)
+metadata/_edit_use_anchors_ = true
+
+[node name="Music" type="Node" parent="." unique_id=921486686]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Music" unique_id=1765072017]
 stream = ExtResource("8_6oaam")
 autoplay = true
 

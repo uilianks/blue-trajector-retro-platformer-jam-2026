@@ -8,7 +8,10 @@ func _ready() -> void:
 	sprite.play("idle")
 	jump_component.setup(self, sprite)
 	BusSignals.jumped.connect(jump_component.launch)
-	
+	floor_snap_length = 8.0 
+	apply_floor_snap()
+	platform_on_leave = 0 
+
 func _physics_process(delta: float) -> void:
 	var is_jumping := imput_component.state == ImputComponent.State.JUMPING
 	imput_component.tick(delta)
@@ -16,11 +19,6 @@ func _physics_process(delta: float) -> void:
 	if landed:
 		imput_component.set_idle()
 	move_and_slide()
-	
-	if is_on_floor():
-		var platform = get_last_slide_collision()
-		if platform and platform.get_collider() is AnimatableBody2D:
-			velocity += platform.get_collider_velocity()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_accept"):

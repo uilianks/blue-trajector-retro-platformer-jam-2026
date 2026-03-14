@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c4kytam7ipx7e"]
+
+[ext_resource type="StyleBox" uid="uid://tcr0h7uixg6" path="res://assets/styles/theme_button.tres" id="1_rtar1"]
+
+[node name="UiPressSpace" type="Control" unique_id=479573559]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=390435357]
+layout_mode = 0
+offset_right = 204.0
+offset_bottom = 40.0
+theme_override_styles/panel = ExtResource("1_rtar1")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1675300472]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -11.5
+offset_right = 23.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press Space"
