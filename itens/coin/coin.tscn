@@ -106,7 +106,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Coin" type="Area2D" unique_id=547508149 groups=["coin"]]
+[node name="Coin" type="Area2D" unique_id=547508149]
 script = ExtResource("1_ksovn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=455219608]

@@ -176,7 +176,7 @@ script = ExtResource("1_iv4m0")
 tile_map_data = PackedByteArray("AAAAABEAAAAJAAMAAAAAABAAAAAJAAMAAAAAAA8AAAAJAAMAAAAAAA4AAAAJAAMAAAAAAA0AAAAJAAMAAAAAAAwAAAAJAAMAAAAAAAsAAAAJAAMAAAAAAAoAAAAJAAMAAAAAAAkAAAAJAAMAAAAAAAgAAAAJAAMAAAAAAAcAAAAJAAMAAAAAAAYAAAAJAAMAAAAAAAUAAAAJAAMAAAAAAAQAAAAJAAMAAAAAAAMAAAAJAAMAAAAAAAIAAAAJAAMAAAAAAAEAAAAJAAMAAAAAAAAAAAAJAAMAAAABAAAAAAAJAAMAAAACAAAAAAAJAAMAAAADAAAAAAAJAAMAAAAEAAAAAAAJAAMAAAAFAAAAAAAJAAMAAAAGAAAAAAAJAAMAAAAHAAAAAAAJAAMAAAAIAAAAAAAJAAMAAAAJAAAAAAAJAAMAAAAKAAAAAAAJAAMAAAALAAAAAAAJAAMAAAAMAAAAAAAJAAMAAAANAAAAAAAJAAMAAAAOAAAAAAAJAAMAAAAPAAAAAAAJAAMAAAAQAAAAAAAJAAMAAAARAAAAAAAJAAMAAAASAAAAAAAJAAMAAAATAAAAAAAJAAMAAAAUAAAAAAAJAAMAAAAVAAAAAAAJAAMAAAAWAAAAAAAJAAMAAAAXAAAAAAAJAAMAAAAYAAAAAAAJAAMAAAAZAAAAAAAJAAMAAAAaAAAAAAAJAAMAAAAbAAAAAAAJAAMAAAAcAAAAAAAJAAMAAAAdAAAAAAAJAAMAAAAeAAAAAAAJAAMAAAAfAAAAAAAJAAMAAAAgAAAAAAAJAAMAAAAhAAAAAAAJAAMAAAAiAAAAAAAJAAMAAAAjAAAAAAAJAAMAAAAkAAAAAAAJAAMAAAAlAAAAAAAJAAMAAAAmAAAAAAAJAAMAAAAnAAAAAAAJAAMAAAAnAAEAAAAJAAMAAAAnAAIAAAAJAAMAAAAnAAMAAAAJAAMAAAAnAAQAAAAJAAMAAAAnAAUAAAAJAAMAAAAnAAYAAAAJAAMAAAAnAAcAAAAJAAMAAAAnAAgAAAAJAAMAAAAnAAkAAAAJAAMAAAAnAAoAAAAJAAMAAAAnAAsAAAAJAAMAAAAnAAwAAAAJAAMAAAAnAA0AAAAJAAMAAAAnAA4AAAAJAAMAAAAnAA8AAAAJAAMAAAAnABAAAAAJAAMAAAAnABEAAAAJAAMAAAA=")
 tile_set = SubResource("TileSet_ock81")
 
-[node name="UI" type="Control" parent="." unique_id=900784186]
+[node name="UI" type="Control" parent="." unique_id=1797770128]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 642.0
@@ -185,38 +185,38 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="UiCoinCounter" parent="UI" unique_id=1754579106 instance=ExtResource("4_k0aus")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 10.0
-offset_right = 149.0
-offset_bottom = 54.0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 127.0
+offset_bottom = 61.0
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 size_flags_vertical = 3
 
 [node name="LifeCounter" parent="UI" unique_id=569572914 instance=ExtResource("5_ifgvf")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 40.0
-offset_right = 651.0
-offset_bottom = 182.0
+offset_left = 11.0
+offset_right = 653.0
+offset_bottom = 48.666664
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 size_flags_vertical = 3
 
 [node name="UiPressSpace" parent="UI" unique_id=479573559 instance=ExtResource("4_i47m7")]
 visible = false
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33021808
+anchor_bottom = 0.14583333
 offset_left = 13.0
 offset_top = 243.0
 offset_right = 13.0

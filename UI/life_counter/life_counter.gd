@@ -1,6 +1,9 @@
 extends Control
 
-@onready var label: Label = $Panel/HBoxContainer/Label2
+@onready var container: HBoxContainer = $Panel/HBoxContainer
+
+# Coloca aqui o caminho da tua textura de coração
+const HEART_TEXTURE = preload("res://assets/hud elements/hearts_hud.png")
 
 func _ready() -> void:
 	BusSignals.player_died.connect(_on_player_died)
@@ -20,7 +23,17 @@ func gain_life() -> void:
 	_update_ui()
 
 func _update_ui() -> void:
-	label.text = str(LifeManager.current_lives)
+	# Limpa os corações antigos
+	for child in container.get_children():
+		child.queue_free()
 
-func _on_life_updated(current: int, max_lives: int) -> void:
+	# Cria um ícone por vida
+	for i in LifeManager.current_lives:
+		var heart := TextureRect.new()
+		heart.texture = HEART_TEXTURE
+		heart.custom_minimum_size = Vector2(32, 32)  # ajusta o tamanho
+		heart.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		container.add_child(heart)
+
+func _on_life_updated(current: int, _max_lives: int) -> void:
 	_update_ui()

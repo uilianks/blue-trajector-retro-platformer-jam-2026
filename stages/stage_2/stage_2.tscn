@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cikbu2e1cfwqp" path="res://environment/plataform2x/plataform2x.tscn" id="14_o0rjs"]
 [ext_resource type="PackedScene" uid="uid://cc88rbbud5phv" path="res://environment/plataform3x/plataform3x.tscn" id="15_4kbdf"]
 [ext_resource type="PackedScene" uid="uid://civgtl4ygu0r7" path="res://environment/plataform4x/plataform4x.tscn" id="16_ock81"]
+[ext_resource type="PackedScene" uid="uid://cf0tjplvtofbw" path="res://itens/coin/coin.tscn" id="17_o0rjs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o0rjs"]
 texture = ExtResource("2_jfjhe")
@@ -175,7 +176,7 @@ script = ExtResource("1_y35lc")
 tile_map_data = PackedByteArray("AAAAABEAAAAJAAMAAAAAABAAAAAJAAMAAAAAAA8AAAAJAAMAAAAAAA4AAAAJAAMAAAAAAA0AAAAJAAMAAAAAAAwAAAAJAAMAAAAAAAsAAAAJAAMAAAAAAAoAAAAJAAMAAAAAAAkAAAAJAAMAAAAAAAgAAAAJAAMAAAAAAAcAAAAJAAMAAAAAAAYAAAAJAAMAAAAAAAUAAAAJAAMAAAAAAAQAAAAJAAMAAAAAAAMAAAAJAAMAAAAAAAIAAAAJAAMAAAAAAAEAAAAJAAMAAAAAAAAAAAAJAAMAAAABAAAAAAAJAAMAAAACAAAAAAAJAAMAAAADAAAAAAAJAAMAAAAEAAAAAAAJAAMAAAAFAAAAAAAJAAMAAAAGAAAAAAAJAAMAAAAHAAAAAAAJAAMAAAAIAAAAAAAJAAMAAAAJAAAAAAAJAAMAAAAKAAAAAAAJAAMAAAALAAAAAAAJAAMAAAAMAAAAAAAJAAMAAAANAAAAAAAJAAMAAAAOAAAAAAAJAAMAAAAPAAAAAAAJAAMAAAAQAAAAAAAJAAMAAAARAAAAAAAJAAMAAAASAAAAAAAJAAMAAAATAAAAAAAJAAMAAAAUAAAAAAAJAAMAAAAVAAAAAAAJAAMAAAAWAAAAAAAJAAMAAAAXAAAAAAAJAAMAAAAYAAAAAAAJAAMAAAAZAAAAAAAJAAMAAAAaAAAAAAAJAAMAAAAbAAAAAAAJAAMAAAAcAAAAAAAJAAMAAAAdAAAAAAAJAAMAAAAeAAAAAAAJAAMAAAAfAAAAAAAJAAMAAAAgAAAAAAAJAAMAAAAhAAAAAAAJAAMAAAAiAAAAAAAJAAMAAAAjAAAAAAAJAAMAAAAkAAAAAAAJAAMAAAAlAAAAAAAJAAMAAAAmAAAAAAAJAAMAAAAnAAAAAAAJAAMAAAAnAAEAAAAJAAMAAAAnAAIAAAAJAAMAAAAnAAMAAAAJAAMAAAAnAAQAAAAJAAMAAAAnAAUAAAAJAAMAAAAnAAYAAAAJAAMAAAAnAAcAAAAJAAMAAAAnAAgAAAAJAAMAAAAnAAkAAAAJAAMAAAAnAAoAAAAJAAMAAAAnAAsAAAAJAAMAAAAnAAwAAAAJAAMAAAAnAA0AAAAJAAMAAAAnAA4AAAAJAAMAAAAnAA8AAAAJAAMAAAAnABAAAAAJAAMAAAAnABEAAAAJAAMAAAA=")
 tile_set = SubResource("TileSet_ock81")
 
-[node name="UI" type="Control" parent="." unique_id=900784186]
+[node name="UI" type="Control" parent="." unique_id=1887736027]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 642.0
@@ -184,38 +185,38 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="UiCoinCounter" parent="UI" unique_id=1754579106 instance=ExtResource("4_sb4rn")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 10.0
-offset_right = 149.0
-offset_bottom = 54.0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 127.0
+offset_bottom = 61.0
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 size_flags_vertical = 3
 
 [node name="LifeCounter" parent="UI" unique_id=569572914 instance=ExtResource("5_26fkx")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 40.0
-offset_right = 651.0
-offset_bottom = 182.0
+offset_left = 11.0
+offset_right = 653.0
+offset_bottom = 48.666664
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 size_flags_vertical = 3
 
 [node name="UiPressSpace" parent="UI" unique_id=479573559 instance=ExtResource("4_wemh8")]
 visible = false
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33021808
+anchor_bottom = 0.14583333
 offset_left = 13.0
 offset_top = 243.0
 offset_right = 13.0
@@ -401,3 +402,54 @@ move_type = 0
 
 [node name="Character" parent="." unique_id=1595900580 instance=ExtResource("4_26fkx")]
 position = Vector2(58, 276)
+
+[node name="Coin" parent="." unique_id=547508149 instance=ExtResource("17_o0rjs")]
+position = Vector2(69, 266)
+
+[node name="Coin2" parent="." unique_id=2034897517 instance=ExtResource("17_o0rjs")]
+position = Vector2(80, 256)
+
+[node name="Coin3" parent="." unique_id=2142382128 instance=ExtResource("17_o0rjs")]
+position = Vector2(91, 246)
+
+[node name="Coin4" parent="." unique_id=1349462035 instance=ExtResource("17_o0rjs")]
+position = Vector2(105, 238)
+
+[node name="Coin5" parent="." unique_id=1746359881 instance=ExtResource("17_o0rjs")]
+position = Vector2(105, 238)
+
+[node name="Coin6" parent="." unique_id=39072703 instance=ExtResource("17_o0rjs")]
+position = Vector2(117, 230)
+
+[node name="Coin7" parent="." unique_id=1451884872 instance=ExtResource("17_o0rjs")]
+position = Vector2(133, 222)
+
+[node name="Coin8" parent="." unique_id=1007849653 instance=ExtResource("17_o0rjs")]
+position = Vector2(152, 215)
+
+[node name="Coin9" parent="." unique_id=1000448416 instance=ExtResource("17_o0rjs")]
+position = Vector2(173, 211)
+
+[node name="Coin10" parent="." unique_id=1390410238 instance=ExtResource("17_o0rjs")]
+position = Vector2(192, 211)
+
+[node name="Coin11" parent="." unique_id=1167380070 instance=ExtResource("17_o0rjs")]
+position = Vector2(212, 217)
+
+[node name="Coin12" parent="." unique_id=1535626393 instance=ExtResource("17_o0rjs")]
+position = Vector2(227, 223)
+
+[node name="Coin13" parent="." unique_id=1643194994 instance=ExtResource("17_o0rjs")]
+position = Vector2(244, 233)
+
+[node name="Coin14" parent="." unique_id=340014754 instance=ExtResource("17_o0rjs")]
+position = Vector2(257, 243)
+
+[node name="Coin15" parent="." unique_id=777552904 instance=ExtResource("17_o0rjs")]
+position = Vector2(269, 255)
+
+[node name="Coin16" parent="." unique_id=1412600039 instance=ExtResource("17_o0rjs")]
+position = Vector2(269, 255)
+
+[node name="Coin17" parent="." unique_id=29646574 instance=ExtResource("17_o0rjs")]
+position = Vector2(547, 173)

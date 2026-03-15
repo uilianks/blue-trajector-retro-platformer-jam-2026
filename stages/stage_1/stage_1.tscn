@@ -180,37 +180,37 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="UiCoinCounter" parent="UI" unique_id=1754579106 instance=ExtResource("4_i2mb4")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 10.0
-offset_right = 149.0
-offset_bottom = 54.0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 127.0
+offset_bottom = 61.0
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.3, 0.3)
 size_flags_vertical = 3
 
 [node name="LifeCounter" parent="UI" unique_id=569572914 instance=ExtResource("4_0ymf2")]
-visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 9.0
-offset_top = 40.0
-offset_right = 651.0
-offset_bottom = 182.0
+offset_left = 11.0
+offset_right = 653.0
+offset_bottom = 48.666664
 grow_horizontal = 1
 grow_vertical = 1
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.4, 0.4)
 size_flags_vertical = 3
 
 [node name="UiPressSpace" parent="UI" unique_id=479573559 instance=ExtResource("12_7iwxo")]
 layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.33021808
+anchor_bottom = 0.14583333
 offset_left = 13.0
 offset_top = 243.0
 offset_right = 13.0
@@ -242,8 +242,71 @@ move_type = 0
 position = Vector2(490, 134)
 move_type = 0
 
-[node name="Coin" parent="." unique_id=547508149 instance=ExtResource("12_i0c67")]
-position = Vector2(510, 125)
+[node name="Coin2" parent="." unique_id=547508149 instance=ExtResource("12_i0c67")]
+position = Vector2(206, 226)
+
+[node name="Coin3" parent="." unique_id=1860979568 instance=ExtResource("12_i0c67")]
+position = Vector2(165, 191)
+
+[node name="Coin4" parent="." unique_id=1821494600 instance=ExtResource("12_i0c67")]
+position = Vector2(217, 211)
+
+[node name="Coin12" parent="." unique_id=501064891 instance=ExtResource("12_i0c67")]
+position = Vector2(228, 199)
+
+[node name="Coin13" parent="." unique_id=1615374843 instance=ExtResource("12_i0c67")]
+position = Vector2(242, 185)
+
+[node name="Coin14" parent="." unique_id=1589494986 instance=ExtResource("12_i0c67")]
+position = Vector2(253, 172)
+
+[node name="Coin15" parent="." unique_id=170339821 instance=ExtResource("12_i0c67")]
+position = Vector2(270, 162)
+
+[node name="Coin16" parent="." unique_id=58094484 instance=ExtResource("12_i0c67")]
+position = Vector2(285, 154)
+
+[node name="Coin17" parent="." unique_id=752109231 instance=ExtResource("12_i0c67")]
+position = Vector2(303, 147)
+
+[node name="Coin18" parent="." unique_id=562598877 instance=ExtResource("12_i0c67")]
+position = Vector2(322, 142)
+
+[node name="Coin19" parent="." unique_id=1758547772 instance=ExtResource("12_i0c67")]
+position = Vector2(346, 142)
+
+[node name="Coin20" parent="." unique_id=2000995024 instance=ExtResource("12_i0c67")]
+position = Vector2(368, 146)
+
+[node name="Coin22" parent="." unique_id=251154272 instance=ExtResource("12_i0c67")]
+position = Vector2(388, 156)
+
+[node name="Coin23" parent="." unique_id=2010937929 instance=ExtResource("12_i0c67")]
+position = Vector2(388, 156)
+
+[node name="Coin5" parent="." unique_id=1572404972 instance=ExtResource("12_i0c67")]
+position = Vector2(146, 193)
+
+[node name="Coin6" parent="." unique_id=1232458976 instance=ExtResource("12_i0c67")]
+position = Vector2(178, 199)
+
+[node name="Coin7" parent="." unique_id=1263658852 instance=ExtResource("12_i0c67")]
+position = Vector2(193, 212)
+
+[node name="Coin8" parent="." unique_id=977820984 instance=ExtResource("12_i0c67")]
+position = Vector2(130, 202)
+
+[node name="Coin9" parent="." unique_id=1004875830 instance=ExtResource("12_i0c67")]
+position = Vector2(116, 212)
+
+[node name="Coin10" parent="." unique_id=2070212315 instance=ExtResource("12_i0c67")]
+position = Vector2(100, 223)
+
+[node name="Coin11" parent="." unique_id=145106704 instance=ExtResource("12_i0c67")]
+position = Vector2(85, 239)
+
+[node name="Coin" parent="." unique_id=699356756 instance=ExtResource("12_i0c67")]
+position = Vector2(73, 254)
 
 [node name="Character" parent="." unique_id=1595900580 instance=ExtResource("2_40wcd")]
 position = Vector2(58, 276)
