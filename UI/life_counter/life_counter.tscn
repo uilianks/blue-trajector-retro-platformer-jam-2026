@@ -3,6 +3,10 @@
 [ext_resource type="Script" uid="uid://bdxd8spjtaby" path="res://UI/life_counter/life_counter.gd" id="1_454hi"]
 [ext_resource type="StyleBox" uid="uid://tcr0h7uixg6" path="res://assets/styles/theme_button.tres" id="1_re5dk"]
 [ext_resource type="Texture2D" uid="uid://b07u33o1eaf5i" path="res://assets/hud elements/hearts_hud.png" id="2_454hi"]
+[ext_resource type="FontFile" uid="uid://ca83504aunyaw" path="res://assets/fonts/OpenType (.otf)/PixeloidMono.otf" id="4_1vtsa"]
+
+[sub_resource type="FontVariation" id="FontVariation_5082x"]
+base_font = ExtResource("4_1vtsa")
 
 [node name="LifeCounter" type="Control" unique_id=569572914]
 layout_mode = 3
@@ -36,4 +40,5 @@ expand_mode = 2
 [node name="Label2" type="Label" parent="Panel/HBoxContainer" unique_id=1035673001]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_fonts/font = SubResource("FontVariation_5082x")
 text = "0"

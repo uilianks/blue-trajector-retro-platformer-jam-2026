@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cywyk324sob47"]
 
 [ext_resource type="Script" uid="uid://dnbvmfnblstka" path="res://stages/credits/credits.gd" id="1_erhdw"]
+[ext_resource type="Theme" uid="uid://co38aih8qgcbj" path="res://assets/styles/new_theme.tres" id="2_ufutd"]
 
 [node name="Credits" type="Control" unique_id=632848189]
 layout_mode = 3
@@ -37,6 +38,7 @@ offset_left = -115.0
 offset_top = -31.0
 grow_horizontal = 0
 grow_vertical = 0
+theme = ExtResource("2_ufutd")
 text = "Back to menu"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

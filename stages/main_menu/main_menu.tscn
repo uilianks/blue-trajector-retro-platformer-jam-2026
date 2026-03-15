@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://70j62m53a3tn"]
 
 [ext_resource type="Script" uid="uid://cvaoxy2o4ulx8" path="res://stages/main_menu/main_menu.gd" id="1_phs36"]
+[ext_resource type="AudioStream" uid="uid://dm87iq5ys6446" path="res://assets/music/ost.wav" id="2_owbi8"]
+[ext_resource type="FontFile" uid="uid://ca83504aunyaw" path="res://assets/fonts/OpenType (.otf)/PixeloidMono.otf" id="2_wxx16"]
+[ext_resource type="Theme" uid="uid://co38aih8qgcbj" path="res://assets/styles/new_theme.tres" id="3_wyd67"]
+
+[sub_resource type="FontVariation" id="FontVariation_wxx16"]
+base_font = ExtResource("2_wxx16")
+
+[sub_resource type="FontVariation" id="FontVariation_wyd67"]
+base_font = ExtResource("2_wxx16")
+
+[sub_resource type="FontVariation" id="FontVariation_7wn7o"]
+base_font = ExtResource("2_wxx16")
 
 [node name="MainMenu" type="Control" unique_id=1466345366]
 layout_mode = 3
@@ -18,28 +30,39 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -108.5
-offset_top = -46.5
-offset_right = 108.5
-offset_bottom = 46.5
+offset_left = -133.5
+offset_top = -52.0
+offset_right = 133.5
+offset_bottom = 59.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=280696844]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_wxx16")
 text = "Game Jam Plataformer 2026"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1738547818]
 layout_mode = 2
+theme = ExtResource("3_wyd67")
+theme_override_fonts/font = SubResource("FontVariation_wxx16")
 text = "Start"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1664941809]
 layout_mode = 2
+theme = ExtResource("3_wyd67")
+theme_override_fonts/font = SubResource("FontVariation_wyd67")
 text = "Credits"
 
 [node name="Button3" type="Button" parent="VBoxContainer" unique_id=2079221416]
 layout_mode = 2
+theme = ExtResource("3_wyd67")
+theme_override_fonts/font = SubResource("FontVariation_7wn7o")
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=890973406]
+stream = ExtResource("2_owbi8")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

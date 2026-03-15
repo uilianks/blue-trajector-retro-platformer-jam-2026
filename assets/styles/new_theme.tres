@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://co38aih8qgcbj"]
+
+[ext_resource type="FontFile" uid="uid://c1w5q1eeaklp4" path="res://assets/fonts/TrueType (.ttf)/PixeloidMono.ttf" id="1_81j4e"]
+[ext_resource type="StyleBox" uid="uid://chtwj76ygoq51" path="res://assets/styles/new_style_box_flat.tres" id="1_mvhcg"]
+
+[resource]
+Button/fonts/font = ExtResource("1_81j4e")
+Button/styles/normal = ExtResource("1_mvhcg")

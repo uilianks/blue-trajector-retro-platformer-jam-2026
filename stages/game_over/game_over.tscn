@@ -1,6 +1,16 @@
 [gd_scene format=3 uid="uid://ctf3c2vnth1ih"]
 
 [ext_resource type="Script" uid="uid://oprxwn5v0wao" path="res://stages/game_over/game_over.gd" id="1_03uwh"]
+[ext_resource type="FontFile" uid="uid://c1w5q1eeaklp4" path="res://assets/fonts/TrueType (.ttf)/PixeloidMono.ttf" id="2_jxgwg"]
+
+[sub_resource type="FontVariation" id="FontVariation_dqj5g"]
+base_font = ExtResource("2_jxgwg")
+
+[sub_resource type="FontVariation" id="FontVariation_jxgwg"]
+base_font = ExtResource("2_jxgwg")
+
+[sub_resource type="FontVariation" id="FontVariation_fm21a"]
+base_font = ExtResource("2_jxgwg")
 
 [node name="GameOver" type="Control" unique_id=1231427711]
 layout_mode = 3
@@ -27,14 +37,17 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=1773741419]
 layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_dqj5g")
 text = "GAME OVER"
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=800073073]
 layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_jxgwg")
 text = "Restart"
 
 [node name="Button2" type="Button" parent="VBoxContainer" unique_id=1037246754]
 layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_fm21a")
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
