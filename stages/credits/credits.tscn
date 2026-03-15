@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cywyk324sob47"]
 
 [ext_resource type="Script" uid="uid://dnbvmfnblstka" path="res://stages/credits/credits.gd" id="1_erhdw"]
+[ext_resource type="FontFile" uid="uid://ca83504aunyaw" path="res://assets/fonts/OpenType (.otf)/PixeloidMono.otf" id="2_sennw"]
 [ext_resource type="Theme" uid="uid://co38aih8qgcbj" path="res://assets/styles/new_theme.tres" id="2_ufutd"]
 
 [node name="Credits" type="Control" unique_id=632848189]
@@ -12,33 +13,35 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_erhdw")
 
-[node name="Label" type="Label" parent="." unique_id=876686083]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=597780584]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -11.5
-offset_right = 27.5
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "Credits"
-
-[node name="Button" type="Button" parent="." unique_id=2095135161]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -115.0
-offset_top = -31.0
-grow_horizontal = 0
-grow_vertical = 0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label4" type="Label" parent="VBoxContainer" unique_id=1948012651]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+theme_override_fonts/font = ExtResource("2_sennw")
+theme_override_font_sizes/font_size = 26
+text = "Credits"
+
+[node name="Label3" type="Label" parent="VBoxContainer" unique_id=269583305]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Developer: Uilian Kidricki
+Game design: Uilian Kidricki
+SFX: Uilian Kidricki
+Art:"
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=2095135161]
+layout_mode = 2
+size_flags_horizontal = 4
 theme = ExtResource("2_ufutd")
 text = "Back to menu"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

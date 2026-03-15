@@ -2,7 +2,9 @@
 
 [ext_resource type="FontFile" uid="uid://c1w5q1eeaklp4" path="res://assets/fonts/TrueType (.ttf)/PixeloidMono.ttf" id="1_81j4e"]
 [ext_resource type="StyleBox" uid="uid://chtwj76ygoq51" path="res://assets/styles/new_style_box_flat.tres" id="1_mvhcg"]
+[ext_resource type="StyleBox" uid="uid://du0c6plgxotum" path="res://assets/styles/hover_new_style_box_flat.tres" id="2_81j4e"]
 
 [resource]
 Button/fonts/font = ExtResource("1_81j4e")
+Button/styles/hover = ExtResource("2_81j4e")
 Button/styles/normal = ExtResource("1_mvhcg")

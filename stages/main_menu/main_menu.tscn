@@ -40,7 +40,8 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="VBoxContainer" unique_id=280696844]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_wxx16")
-text = "Game Jam Plataformer 2026"
+text = "Blue Trajectory"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer" unique_id=1738547818]
 layout_mode = 2
@@ -66,4 +67,4 @@ autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_button_3_pressed"]

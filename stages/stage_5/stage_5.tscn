@@ -187,6 +187,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="UiCoinCounter" parent="UI" unique_id=1754579106 instance=ExtResource("4_f688h")]
+visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -201,6 +202,7 @@ scale = Vector2(0.5, 0.5)
 size_flags_vertical = 3
 
 [node name="LifeCounter" parent="UI" unique_id=569572914 instance=ExtResource("10_73pfr")]
+visible = false
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
